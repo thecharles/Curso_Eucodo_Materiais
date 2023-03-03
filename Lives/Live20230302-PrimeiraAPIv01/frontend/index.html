@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>List of Brands</title>
+    </head>
+    <body>
+        <div id="root"></div>
+
+        <script
+            crossorigin
+            src="https://unpkg.com/react@17.0.2/umd/react.production.min.js"></script>
+        <script
+            crossorigin
+            src="https://unpkg.com/react-dom@17.0.2/umd/react-dom.production.min.js"></script>
+        <script>
+      function App() {
+        const [brands, setBrands] = React.useState([]);
+
+        React.useEffect(() => {
+          fetch("https://localhost:7071/api/brands")
+            .then((response) => response.json())
+            .then((data) => setBrands(data));
+        }, []);
+
+        return (
+          <div>
+            <h1>List of Brands</h1>
+            <ul>
+              {brands.map((brand) => (
+                <li key={brand.brandId}>{brand.brandName}</li>
+              ))}
+            </ul>
+          </div>
+        );
+      }
+
+      ReactDOM.render(<App />, document.getElementById("root"));
+    </script>
+    </body>
+</html>

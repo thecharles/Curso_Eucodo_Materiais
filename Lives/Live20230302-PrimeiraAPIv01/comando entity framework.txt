@@ -1,0 +1,10 @@
+PASSO A PASSO
+
+1. Criar o projeto de API
+
+2. Adicionar referencias aos nugets do entity framework
+
+3. Codar comando abaixo:
+dotnet ef dbcontext scaffold "Data Source=.; Initial Catalog=bikestore; User ID=charles;Password=015580; MultipleActiveResultSets=True;TrustServerCertificate=True;" Microsoft.EntityFrameworkCore.SqlServer --context-dir .\Data --output-dir .\Models
+
+4. gerar o controller da api
