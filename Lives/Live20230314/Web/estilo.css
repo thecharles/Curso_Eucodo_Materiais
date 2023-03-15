@@ -1,0 +1,85 @@
+body {
+  font-family: arial;
+  margin: 0px;
+}
+
+table {
+  border: 0px;
+  margin: 0px;
+}
+
+#daniel {
+  float: right;
+  width: 300px;
+}
+
+h1 {
+  text-align: center;
+}
+
+ul {
+  font-size: 13pt;
+}
+
+#rodape {
+  background-color: #1c1d1f;
+}
+
+.rodape_menu {
+  list-style: none;
+}
+
+.rodape_menu li {
+  margin-bottom: 10px;
+}
+
+.rodape_menu a {
+  color: #fff;
+}
+
+#rodape_idioma_container {
+  vertical-align: top;
+  text-align: right;
+}
+
+.rodape_menu_container {
+  width: 250px;
+}
+
+#pagina_conteudo {
+  background-color: #eaeaea;
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+
+#pagina_topo {
+  position: relative;
+}
+
+#pagina_topo::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 0;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+}
+
+#pagina_topo a {
+  text-decoration: none;
+  color: #808080;
+  font-weight: bold;
+}
+
+#pagina_topo td {
+  padding: 10px;
+}
+
+#campoPesquisa {
+  width: 100%;
+  font-size: 18px; /* Ajuste o tamanho da fonte conforme necessário */
+  border: 2px solid #333; /* Cor e espessura da borda */
+  border-radius: 25px; /* Ajuste o raio da borda para controlar o arredondamento dos cantos */
+  padding: 8px 12px;
+}
