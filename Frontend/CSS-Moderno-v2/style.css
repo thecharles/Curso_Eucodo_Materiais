@@ -1,0 +1,45 @@
+body {
+  background-color: #000;
+  color: #fff;
+}
+
+.imagem {
+  width: 800px;
+}
+
+.texto {
+  font-size: 22px;
+}
+
+@media (min-width: 1000px) and (max-width: 2500px) {
+  body {
+    background-color: purple;
+    color: yellow;
+  }
+}
+
+@media (max-width: 768px) {
+  body {
+    background-color: red;
+    color: #fff;
+  }
+}
+
+@media (max-width: 425px) {
+  .imagem {
+    width: 100%;
+  }
+
+  h1 {
+    text-align: center;
+  }
+
+  .texto {
+    text-align: center;
+  }
+
+  body {
+    background-color: yellow;
+    color: #000;
+  }
+}

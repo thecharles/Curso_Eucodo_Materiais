@@ -1,0 +1,25 @@
+body {
+  margin: 0px;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  column-gap: 10px;
+  row-gap: 10px;
+  flex-wrap: wrap;
+}
+
+.item {
+  width: 250px;
+  background-color: red;
+  border: solid 1px #000;
+  height: 250px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}

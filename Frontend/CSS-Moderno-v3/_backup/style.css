@@ -1,0 +1,40 @@
+.imagem {
+  width: 800px;
+}
+
+.texto {
+  font-size: 22px;
+}
+
+body {
+  background-color: black;
+  color: #fff;
+}
+
+@media screen and (min-width: 1024px) and (max-width: 1300px) {
+  body {
+    background-color: red;
+  }
+}
+
+@media screen and (max-width: 860px) {
+  body {
+    background-color: yellow;
+    color: #000;
+  }
+  .imagem {
+    width: 100%;
+    height: auto;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  body {
+    background-color: orange;
+    color: #000;
+  }
+  h1,
+  p {
+    text-align: center;
+  }
+}
