@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Lista de Tarefas</title>
+        <script src="https://code.jquery.com/jquery-3.6.0.min.js"
+            crossorigin="anonymous"></script>
+    </head>
+    <body>
+        <h1>Lista de Tarefas</h1>
+        <ul id="todo-list"></ul>
+
+        <script>
+    $(document).ready(function () {
+      fetchTodos();
+
+      function fetchTodos() {
+        $.ajax({
+          url: 'https://localhost:7169/api/Todoes',
+          method: 'GET',
+          success: function (data) {
+            renderTodos(data);
+          },
+          error: function (error) {
+            console.error('Erro ao buscar os dados:', error);
+          },
+        });
+      }
+
+      function renderTodos(todos) {
+        const $todoList = $('#todo-list');
+        todos.forEach((todo) => {
+          const dataInclusao = todo.dataInclusao || 'Data não disponível';
+          $todoList.append(`<li>${todo.titulo} (${dataInclusao})</li>`);
+        });
+      }
+    });
+  </script>
+    </body>
+</html>

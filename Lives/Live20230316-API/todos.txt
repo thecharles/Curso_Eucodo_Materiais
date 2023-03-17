@@ -1,0 +1,4 @@
+Vai usar o axios? para consumir a api no front?
+extensao cors
+	tem que ativar
+resolver o problema cors
