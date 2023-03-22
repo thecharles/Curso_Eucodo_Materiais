@@ -1,0 +1,160 @@
+.nomes_container {
+  display: flex;
+  flex-shrink: 0;
+  justify-content: center;
+  align-items: center;
+  flex-grow: 1;
+  flex-direction: row;
+  flex-basis: 250px;
+  gap: 10px 10px;
+}
+
+.pagina_container {
+  font-family: Arial, Helvetica, sans-serif;
+  display: flex;
+  flex-grow: 1;
+  justify-content: center;
+}
+
+.perfil_container {
+  display: flex;
+  flex-direction: row;
+  flex-grow: 1;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.perfil_links {
+  font-weight: bold;
+  color: #808080;
+  font-size: 13pt;
+  margin-bottom: 10px;
+}
+
+.perfil_links a {
+  background-color: #eaeaea;
+  color: #000;
+  text-decoration: none;
+  margin-right: 10px;
+  margin-left: 10px;
+}
+
+.perfil_numeros {
+  display: flex;
+  gap: 20px 20px;
+}
+
+.perfil_numeros a {
+  color: #808080;
+  font-weight: bold;
+}
+
+.perfil_numeros a:hover {
+  color: #000;
+}
+
+.destaques_container {
+  padding-left: 30px;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  margin-bottom: 30px;
+  gap: 10px 10px;
+}
+
+.destaques_container div {
+  text-align: center;
+}
+
+.espaco {
+  width: 150px;
+}
+
+.pagina_conteudo {
+  width: 950px;
+}
+
+#campoPesquisa input {
+  width: 100%;
+  height: 30px;
+  border: solid 1px #ccc;
+  border-radius: 5px;
+  padding: 0 10px;
+}
+
+.itens_container {
+  display: flex;
+  flex-direction: row;
+  flex-grow: 1;
+  justify-content: flex-start;
+  margin: 0 auto;
+  margin-bottom: 10px;
+}
+
+.itens_container div {
+  width: 33%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+#botaoEntrar {
+  justify-content: flex-end;
+}
+
+.posts_container {
+  display: flex;
+  flex-grow: 1;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 10px 10px;
+}
+
+@media screen and (max-width: 600px) {
+  .posts_container img {
+    width: 98%;
+  }
+
+  #campoPesquisa,
+  .itens_container,
+  #botaoEntrar,
+  #perfil_informacoes,
+  .espaco {
+    display: none;
+  }
+
+  #logo {
+    text-align: center;
+  }
+
+  .destaques_container {
+    justify-content: center;
+    padding-left: 0px;
+  }
+
+  .perfil_container {
+    display: flex;
+    flex-direction: row;
+    flex-grow: 1;
+    justify-content: flex-start;
+    align-items: center;
+  }
+
+  #perfil_imagem {
+    width: 100%;
+    text-align: center;
+  }
+
+  .perfil_container div {
+  }
+}
+
+@media screen and (max-width: 400px) {
+  #logo img {
+    height: 100px;
+  }
+  .itens_container div {
+    border: solid 1px green;
+  }
+}
