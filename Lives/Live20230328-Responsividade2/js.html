@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+    </head>
+    <body>
+
+        <form onsubmit="return tratarFormulario()">
+            email: <input type="text" id="txtEmail">
+            senha: <input type="password" id="txtSenha">
+            <input type="submit" value="Enviar">
+        </form>
+
+        <script type="text/javascript">
+
+            function tratarFormulario()
+            {
+                email = document.getElementById("txtEmail").value;
+                senha = document.getElementById("txtSenha").value;
+
+                if(email == "charles@gmail.com" && senha == "123456")
+                {
+                    alert("Autenticado com sucesso");
+                }else{
+                    alert("Email ou senha inválidos");
+                }
+
+                return false;
+            }
+
+            // nome = "charles";
+            // sobrenome = "silva";
+
+            // nomeCompleto = nome + " " 
+            //     + sobrenome + " - " + 
+            //     " Programador " + nome
+            //     + " xxxxxxx ";
+
+            // document.write(nomeCompleto);
+            // document.write("<hr>");
+
+            // nomeCompleto = nomeCompleto + nomeCompleto;
+            // document.write(nomeCompleto);
+            // document.write("<hr>");
+
+            // nomeCompleto = nomeCompleto + nomeCompleto + nome + sobrenome + "@gmail.com";
+            // document.write(nomeCompleto);
+            // document.write("<hr>");
+
+            // nomeCompleto = "limpei";
+            // document.write(nomeCompleto);
+            // document.write("<hr>");
+
+            // maiorIdade = true;
+            // altura = 1.80;
+            // peso = 80;
+            
+            // anoAtual = 2023;
+            // anoNascimento = 1985;
+
+            // idade = anoAtual - anoNascimento;
+
+            // Variáveis (gavetas)
+
+            // Estrutura de condição
+
+
+            // nome = "Charles";
+            // sobrenome = "Silva";
+            // idade = 15;
+            // devendo = false;            
+
+            // if(devendo == true)
+            // {
+            //     document.write("Você está devendo<br>");
+            //     document.write("Você está devendo 2<br>");
+            //     document.write("Você está devendo 3<br>");
+
+            //     if(idade > 18)
+            //     {
+            //         document.write("Você é maior de idade<br>");
+            //     }
+            //     else{
+            //         document.write("Você é menor de idade<br>");
+            //     }
+            // }
+            // else{
+            //     document.write("Vc não está devendo     ");
+            //     document.write("Vc não está devendo     ");
+            //     document.write("Vc não está devendo     ");
+            //     document.write("Vc não está devendo     ");
+
+            //     if(idade > 18)
+            //     {
+            //         document.write("Você é maior de idade<br>");
+            //     }
+            //     else{
+            //         document.write("Você é menor de idade<br>");
+
+            //         if(idade > 18)
+            //         {
+            //             document.write("Você é maior de idade<br>");
+            //         }
+            //         else{
+            //             document.write("Você é menor de idade<br>");
+            //         }
+            //     }
+            // }
+            
+            // document.write("<hr>fim");
+
+            // Estrutura de repetição
+
+            // document.write("<table border=1 width=100%>");
+
+            // for(i = 0 ;i<=100;i++)
+            // {
+            //     document.write("<tr>");
+            //     document.write("<td>");
+            //     document.write(i);
+            //     document.write("</td>");
+            //     document.write("</tr>");
+            // }
+
+            // document.write("</table>");
+
+            // document.write(nome);
+
+        </script>
+    </body>
+</html>

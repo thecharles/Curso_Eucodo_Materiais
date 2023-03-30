@@ -1,0 +1,25 @@
+body {
+  margin: 0px;
+  background: url("imagens/bg.jpg") no-repeat top left fixed;
+}
+
+.header_container {
+  height: 100vh;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 10px 10px;
+  flex-wrap: wrap;
+}
+
+.header_container div {
+  background-color: #eaeaea;
+  width: 250px;
+  height: 250px;
+  border: solid 1px #000;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
