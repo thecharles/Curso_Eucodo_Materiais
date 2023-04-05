@@ -1,0 +1,6 @@
+.mensagem_login_invalido {
+  background-color: red;
+  padding: 50px;
+  border: solid 10px yellow;
+  display: none;
+}

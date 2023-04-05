@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+    </head>
+    <body>
+
+        <script type="text/javascript">
+
+            function calcularIdade()
+            {
+                var anos = document.getElementById("anos").value;
+                var meses = document.getElementById("meses").value;
+                var dias = document.getElementById("dias").value;
+
+                var resultado = document.getElementById("resultado");
+
+                var idadeEmDias = (anos * 365) + (meses * 30) + dias;
+
+                resultado.innerHTML = idadeEmDias;
+            }
+
+        </script>
+        <h1>
+            Formulário de calculo de idade</h1>
+
+        <form action="novo.html" method="post">
+            <label for="anos">Anos:</label>
+            <input type="number" name="anos" id="anos" placeholder="Digite a
+                idade em anos">
+            <br>
+            <label for="meses">Meses:</label>
+            <input type="number" name="meses" id="meses" placeholder="Digite a
+                idade em meses">
+            <br>
+            <label for="dias">Dias:</label>
+            <input type="number" name="dias" id="dias" placeholder="Digite a
+                idade em dias">
+            <br>
+            <input type="button" value="Enviar" onclick="calcularIdade();">
+        </form>
+
+        <div>
+            <h6>
+                Sua idade em dias
+            </h6>
+            <span id="resultado"></span>
+        </div>
+
+    </body>
+</html>
