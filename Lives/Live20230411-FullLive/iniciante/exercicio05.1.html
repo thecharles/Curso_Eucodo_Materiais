@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+    </head>
+    <body>
+
+        <script type="text/javascript">
+
+            function calcularValorNotaFiscal()
+            {
+                var valorServico = parseFloat(document.getElementById("valorServico").value);
+                var percentualImposto = parseFloat(document.getElementById("percentualImposto").value);
+
+                var valorNotaFiscal = valorServico / (1 - (percentualImposto / 100));
+                var valorLiquido = valorNotaFiscal * (1 - (percentualImposto / 100));
+
+                document.getElementById("valorNotaFiscal").innerHTML = valorNotaFiscal;
+                document.getElementById("valorLiquido").innerHTML = valorLiquido;
+
+                return false;
+            }
+        </script>
+        <h1>Exercicio 05.1</h1>
+        <p>
+            O Gabriel precisa ganhar 10 mil líquido em um projeto. Ele paga 5%
+            de imposto. Qual o valor da nota fiscal a ser emitida
+            que depois de pago o imposto, ele ganhe 10 mil líquido?
+        </p>
+
+        <form>
+            O valor do serviço: <input type="text" id="valorServico" /><br>
+            Percentual de imposto: <input type="text" id="percentualImposto" /><br>
+            <div>
+                <button onclick="return calcularValorNotaFiscal();">Calcular
+                    valor da nota fiscal</button>
+            </div>
+
+        </form>
+        <hr>
+        <div>
+            <h1>Valor da nota fiscal</h1>
+            <p id="valorNotaFiscal"></p>
+            <div>
+                Valor liquido após pagar os impostos</div>
+            <p id="valorLiquido"></p>
+        </div>
+
+
+    </body>
+</html>
