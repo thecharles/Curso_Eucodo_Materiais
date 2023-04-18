@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+    </head>
+    <body>
+
+        <script type="text/javascript">
+
+            function calcularNovoSalario()
+            {
+                var salario = parseFloat(document.getElementById("salario").value);
+                var percentualReajuste = parseFloat(document.getElementById("percentualReajuste").value);
+
+                var novoSalario = salario + (salario * (percentualReajuste / 100));
+
+                document.getElementById("novoSalario").innerHTML = novoSalario;
+
+                return false;
+            }
+        </script>
+        <h1>
+            Exercicio 05
+        </h1>
+        <p>
+            Escreva um algoritmo para ler o salário mensal atual de um
+            funcionário e o percentual de reajuste. Calcular e escrever o valor
+            do novo salário.
+        </p>
+        <form>
+            Salário: <input type="text" id="salario" />
+            <br>
+            Percentual de reajuste: <input type="text" id="percentualReajuste"
+                />
+            <br>
+            <div>
+                <button onclick="return calcularNovoSalario();">Calcular novo
+                    salário</button>
+            </div>
+        </form>
+        <div>
+            <h1>Novo salário</h1>
+            <p id="novoSalario"></p>
+        </div>
+    </body>
+</html>

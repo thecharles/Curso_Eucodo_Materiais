@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+    </head>
+    <body>
+
+        <script type="text/javascript">
+                
+                function calcularMedia()
+                {
+                    var nota1 = parseFloat(document.getElementById("nota1").value);
+                    var nota2 = parseFloat(document.getElementById("nota2").value);
+                    var nota3 = parseFloat(document.getElementById("nota3").value);
+    
+                    var media = (nota1 * 2 + nota2 * 3 + nota3 * 5) / 10;
+    
+                    document.getElementById("media").innerHTML = media;
+    
+                    return false;
+                }
+        </script>
+        <h1>Exercicio 09</h1>
+        <p>
+            Faça um algoritmo que leia três notas de um aluno, calcule e escreva
+            a média final deste aluno. Considerar que a média é ponderada e que
+            o peso das notas é 2, 3 e 5.
+        </p>
+
+        <form>
+            <div>
+                <label for="nota1">Nota 1</label>
+                <input type="text" id="nota1" />
+            </div>
+            <div>
+                <label for="nota2">Nota 2</label>
+                <input type="text" id="nota2" />
+            </div>
+            <div>
+                <label for="nota3">Nota 3</label>
+                <input type="text" id="nota3" />
+            </div>
+            <div>
+                <button onclick="return calcularMedia();">Calcular média</button>
+            </div>
+            <div id="media">
+            </div>
+        </form>
+    </body>
+</html>

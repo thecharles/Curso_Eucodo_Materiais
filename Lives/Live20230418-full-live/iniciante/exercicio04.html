@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+    </head>
+    <body>
+
+        <script type="text/javascript">
+
+            function calculaPercentuais()
+            {
+                var totalBrancos = parseInt(document.getElementById("totalBrancos").value);
+                var totalNulos = parseInt(document.getElementById("totalNulos").value);
+                var totalValidos = parseInt(document.getElementById("totalValidos").value);
+
+                totalEleitores = totalBrancos + totalNulos + totalValidos;
+
+                var percentualBrancos = (totalBrancos / totalEleitores) * 100;
+                var percentualNulos = (totalNulos / totalEleitores) * 100;
+                var percentualValidos = (totalValidos / totalEleitores) * 100;
+
+                document.getElementById("totalBrancosPercentual").innerHTML = percentualBrancos + "%";
+                document.getElementById("totalNulosPercentual").innerHTML = percentualNulos + "%";
+                document.getElementById("totalValidosPercentual").innerHTML = percentualValidos + "%";
+
+                return false;
+            }
+
+        </script>
+        <h1>
+            Exercicio 04
+        </h1>
+
+        <p>
+            Escreva um algoritmo para ler o número total de eleitores de um
+            município, o número de votos brancos, nulos e válidos. Calcular e
+            escrever o percentual que cada um representa em relação ao total de
+            eleitores.
+        </p>
+
+        <form>
+            total branco: <input type="text" id="totalBrancos" /> <span
+                id="totalBrancosPercentual"></span><br>
+            total nulos: <input type="text" id="totalNulos" /> <span
+                id="totalNulosPercentual"></span><br>
+            total válidos: <input type="text" id="totalValidos" /> <span
+                id="totalValidosPercentual"></span>
+
+            <div>
+                <button onclick="return calculaPercentuais();">Calculor
+                    percentuais</button>
+            </div>
+        </form>
+
+    </body>
+</html>
