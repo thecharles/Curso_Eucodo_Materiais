@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+    </head>
+    <body>
+
+        <script type="text/javascript">
+            function calcularIdade()
+            {
+                var anoAtual = parseInt(document.getElementById("anoAtual").value);
+                var anoNascimento = parseInt(document.getElementById("anoNascimento").value);
+
+                var idade = anoAtual - anoNascimento;
+
+                if (idade >= 18)
+                {
+                    document.getElementById("resultado").innerHTML = "Pode votar";
+                }
+                else
+                {
+                    document.getElementById("resultado").innerHTML = "Não pode votar";
+                }
+
+                return false;
+            }
+        </script>
+        <h1>
+            Exercicio 12
+        </h1>
+        <p>
+            Ler o ano atual e o ano de nascimento de uma pessoa. Escrever uma
+            mensagem que diga se ela poderá ou não votar este ano (não é
+            necessário considerar o mês em que a pessoa nasceu).
+
+            Só pode votar se tiver 18 anos ou mais.
+        </p>
+
+        <form>
+            <div>
+                <label for="anoAtual">Ano atual</label>
+                <input type="text" id="anoAtual" />
+            </div>
+            <div>
+                <label for="anoNascimento">Ano de nascimento</label>
+                <input type="text" id="anoNascimento" />
+            </div>
+            <div>
+                <button onclick="return calcularIdade();">Calcular idade</button>
+            </div>
+            <div id="resultado">
+            </div>
+        </form>
+
+    </body>
+</html>

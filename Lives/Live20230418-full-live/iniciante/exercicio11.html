@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+    </head>
+    <body>
+
+        <script type="text/javascript">
+            function calcularMedia()
+            {
+                var nota1 = parseFloat(document.getElementById("nota1").value);
+                var nota2 = parseFloat(document.getElementById("nota2").value);
+
+                var media = (nota1 + nota2) / 2;
+
+                document.getElementById("media").innerHTML = media;
+                
+                document.getElementById("resultado").innerHTML = (media >= 6) ? "Aprovado" : "Reprovado";
+                
+                return false;
+            }
+        </script>
+        <h1>Exercicio 11</h1>
+        <p>
+            Ler as notas da 1a. e 2a. avaliações de um aluno. Calcular a média
+            aritmética simples e escrever uma mensagem que diga se o aluno foi
+            ou não aprovado (considerar que nota igual ou maior que 6 o aluno é
+            aprovado). Escrever também a média calculada
+        </p>
+
+        <form>
+            <div>
+                <label for="nota1">Nota 1</label>
+                <input type="text" id="nota1" />
+            </div>
+            <div>
+                <label for="nota2">Nota 2</label>
+                <input type="text" id="nota2" />
+            </div>
+            <div>
+                <button onclick="return calcularMedia();">Calcular média</button>
+            </div>
+            <div id="resultado">
+            </div>
+            <div id="media">
+            </div>
+        </form>
+
+
+    </body>
+</html>
