@@ -11,13 +11,13 @@ namespace CandidateTesting.CharlesAugustoSilva.Converters
     /// </summary>
     public class CDNLog
     {
-        public string ResponseSize { get; set; }
-        public string StatusCode { get; set; }
-        public string CacheStatus { get; set; }
-        public string RequestLine { get; set; }
+        public string? ResponseSize { get; set; }
+        public string? StatusCode { get; set; }
+        public string? CacheStatus { get; set; }
+        public string? RequestLine { get; set; }
         public decimal TimeTaken { get; set; }
-        public string HttpMethod { get; set; }
-        public string UriPath { get; set; }
+        public string? HttpMethod { get; set; }
+        public string? UriPath { get; set; }
 
         public bool IsValid { get { return StatusCode != null; } }
 

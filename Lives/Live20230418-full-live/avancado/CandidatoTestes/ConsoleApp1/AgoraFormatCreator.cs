@@ -13,9 +13,10 @@ namespace CandidateTesting.CharlesAugustoSilva.Converters
     {
         List<string> fields = new List<string>();
 
-        public void AddField(string fieldContent)
+        public void AddField(string? fieldContent)
         {
-            fields.Add(fieldContent);
+            if(fieldContent != null)
+                fields.Add(fieldContent);
         }
 
         public void AddField(decimal valor)
