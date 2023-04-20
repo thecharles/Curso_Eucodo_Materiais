@@ -1,7 +1,0 @@
-#Version: 1.0
-#Date: 19/04/2023 16:41:51
-#Fields: provider http-method status-code uri-path time-taken response-size cache-status
-"MINHA CDN" GET 200 /robots.txt 100.2 312 HIT
-"MINHA CDN" POST 200 /myImages 319.4 101 MISS
-"MINHA CDN" GET 404 /not-found 142.9 199 MISS
-"MINHA CDN" GET 200 /robots.txt 245.1 312 REFRESH_HIT
