@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+    </head>
+    <body>
+
+        <script type="text/javascript">
+
+            function calcularSaldo()
+            {
+                var numeroConta = parseInt(document.getElementById("numeroConta").value);
+                var saldo = parseInt(document.getElementById("saldo").value);
+                var debito = parseInt(document.getElementById("debito").value);
+                var credito = parseInt(document.getElementById("credito").value);
+
+                var saldoAtual = saldo - debito + credito;
+
+                // if (saldoAtual >= 0)
+                // {
+                //     document.getElementById("resultado").innerHTML = "Saldo Positivo";
+                // }
+                // else
+                // {
+                //     document.getElementById("resultado").innerHTML = "Saldo Negativo";
+                // }
+
+                document.getElementById("resultado").innerHTML = "Saldo da conta " + numeroConta + ": ("+ saldoAtual +")" + 
+                (saldoAtual >= 0 ? "Saldo Positivo" : "Saldo Negativo");
+
+                return false;
+            }
+        </script>
+        <h1>
+            Exercicio 15
+        </h1>
+        <p>
+            Faça um algoritmo para ler: número da conta do cliente, saldo,
+            débito e crédito. Após, calcular e escrever o saldo atual (saldo
+            atual = saldo - débito + crédito). Também testar se saldo atual for
+            maior ou igual a zero escrever a mensagem 'Saldo Positivo', senão
+            escrever a mensagem 'Saldo Negativo'.
+        </p>
+
+        <form>
+            <div>
+                Número da conta
+                <input type="text" id="numeroConta" />
+            </div>
+            <div>
+                Saldo
+                <input type="text" id="saldo" />
+            </div>
+            <div>
+                Débito
+                <input type="text" id="debito" />
+            </div>
+            <div>
+                Crédito
+                <input type="text" id="credito" />
+            </div>
+            <div>
+                <button onclick="return calcularSaldo();">Calcular saldo</button>
+            </div>
+            <div id="resultado">
+            </div>
+        </form>
+    </body>
+</html>
