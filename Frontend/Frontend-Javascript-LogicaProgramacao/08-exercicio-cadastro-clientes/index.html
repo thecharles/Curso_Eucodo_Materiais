@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+    </head>
+    <body>
+
+        <h1>Exercício - Cadastro de clientes</h1>
+        <script type="text/javascript">
+
+            var nome = prompt("Digite seu nome: ");
+            var sobrenome = prompt("Digite seu sobrenome: ");
+            var email = prompt("Digite seu email: ");
+            var telefone = prompt("Digite seu telefone: ");
+            var anoDeNascimento = prompt("Digite seu ano de nascimento: ");
+            var idade = 2023 - parseInt(anoDeNascimento);
+
+            // console.log(anoDeNascimento);
+            // console.log(idade);
+
+            alert(
+                "CLIENTE CADASTRADO COM SUCESSO!" +
+                "\nNome: " + nome + " " + sobrenome +
+                "\nEmail: " + email +
+                "\nTelefone: " + telefone +
+                "\nAno de nascimento: " + anoDeNascimento + " (" + idade + " anos)"
+            );
+
+    </script>
+    </body>
+</html>

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+    </head>
+    <body>
+
+        <h1>Exercício - Teste de velocidade</h1>
+        <p>
+            Escreva um programa em javascript
+            que permita inserir o nome e a
+            velocidade de dois veículos e exiba
+            na tela uma mensagem dizendo
+            qual dos dois é mais rápido (ou
+            que as velocidades são iguais se
+            este for o caso).
+        </p>
+        <script type="text/javascript">
+
+            var nome1 = prompt("Digite o nome do primeiro veículo");
+            var velocidade1 = parseInt(prompt("Digite a velocidade do primeiro veículo"));
+            var nome2 = prompt("Digite o nome do segundo veículo");
+            var velocidade2 = parseInt(prompt("Digite a velocidade do segundo veículo"));
+
+            if (velocidade1 > velocidade2) {
+                console.log(nome1 + " é mais rápido que " + nome2);
+            } else if (velocidade1 < velocidade2) {
+                console.log(nome2 + " é mais rápido que " + nome1);
+            } else {
+                console.log("As velocidades são iguais");
+            }
+
+        </script>
+    </body>
+</html>

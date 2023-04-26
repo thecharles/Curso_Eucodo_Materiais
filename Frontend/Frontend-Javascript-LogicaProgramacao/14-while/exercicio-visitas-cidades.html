@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+    </head>
+    <body>
+        <h1>Lógica de programação com javascript - WHILE - Exercício</h1>
+        <p>
+            Escreva um programa em javascript
+            que peça o nome de um turista e
+            então pergunte se ele já visitou
+            alguma cidade. Caso a resposta
+            seja sim, pergunte o nome da
+            cidade e o armazene em uma
+            variável, e então continue
+            perguntando se o turista visitou
+            alguma outra cidade até que a
+            resposta seja não. No fim, o
+            programa deve exibir o nome do
+            turista, quantas e quais cidades ele
+            visitou.
+        </p>
+        <script type="text/javascript">
+
+            var nomeTurista = prompt("Digite o nome do turista: ");
+            var contador = 0;
+            var cidades = "";
+
+            while(true){
+                var visitouCidade = prompt("O turista visitou alguma cidade? (SIM/NAO)");
+                if(visitouCidade == "SIM"){
+                    var nomeCidade = prompt("Digite o nome da cidade: ");
+                    cidades += nomeCidade + ", ";
+                    contador++;
+                }else if(visitouCidade == "NAO"){
+                    break;
+                }else{
+                    alert("Opção inválida!");
+                }
+            }
+
+            console.log("O turista " + nomeTurista + " visitou " + contador + " cidades: " + cidades);
+            console.log("Fim do programa");
+
+        </script>
+    </body>
+</html>

@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+    </head>
+    <body>
+
+        <h1>Exercício - Número maior</h1>
+        <p>
+            Crie um programa que solicita ao
+            usuário dois números e verifica
+            qual deles é o maior. Em seguida,
+            exibe uma mensagem informando
+            qual é o maior número.
+        </p>
+        <script type="text/javascript">
+
+            var numero1 = parseInt(prompt("Digite o primeiro número"));
+            var numero2 = parseInt(prompt("Digite o segundo número"));
+
+            if (numero1 > numero2) {
+                console.log(numero1 + " é maior que " + numero2);
+            } else if (numero1 < numero2) {
+                console.log(numero2 + " é maior que " + numero1);
+            } else {
+                console.log("Os números são iguais");
+            }            
+
+        </script>
+    </body>
+</html>

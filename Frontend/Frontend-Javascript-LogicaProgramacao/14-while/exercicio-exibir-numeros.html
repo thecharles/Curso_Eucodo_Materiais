@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+    </head>
+    <body>
+        <h1>Lógica de programação com javascript - WHILE - Exercício</h1>
+        <p>
+            Escreva um programa que solicita
+            ao usuário que adivinhe um
+            número aleatório entre 1 e 100. O
+            programa deve continuar pedindo
+            que o usuário adivinhe até que ele
+            acerte o número. O programa deve
+            exibir uma mensagem informando
+            se o número digitado pelo usuário
+            é maior ou menor do que o
+            número aleatório.
+
+            Exemplo:
+
+            O programa gera o número
+            aleatório 57. Se o usuário digitar
+            50, o programa deve exibir "O
+            número é maior". Se o usuário
+            digitar 60, o programa deve exibir
+            "O número é menor". O programa
+            deve continuar pedindo que o
+            usuário adivinhe até que ele acerte
+            o número 57.
+        </p>
+        <script type="text/javascript">
+
+            var numeroAleatorio = Math.floor(Math.random() * 100) + 1;
+            var numeroDigitado = parseInt(prompt("Digite um número: "));
+            var contador = 1;
+
+            while(numeroDigitado != numeroAleatorio){
+                if(numeroDigitado > numeroAleatorio){
+                    alert("O número é menor");
+                }
+                else{
+                    alert("O número é maior");
+                }
+                numeroDigitado = parseInt(prompt("Digite um número: "));
+                contador++;
+            }
+
+            alert("Você acertou o número em " + contador + " tentativas");
+
+        </script>
+    </body>
+</html>

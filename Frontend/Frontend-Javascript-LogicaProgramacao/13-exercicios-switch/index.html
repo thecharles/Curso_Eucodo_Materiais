@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+    </head>
+    <body>
+        <h1>
+            Exercícios - SWITCH
+        </h1>
+        <p>
+            Escreva um programa em
+            JavaScript que solicita ao usuário o
+            nome de um mês e exibe o
+            número de dias desse mês. Use o
+            comando switch para verificar qual
+            é o mês e exibir o número correto
+            de dias.
+
+            Exemplo:
+
+            Se o usuário digitar "fevereiro", o
+            programa deve exibir "28 dias". Se
+            o usuário digitar "abril", o
+            programa deve exibir "30 dias".
+        </p>
+        <script type="text/javascript">
+
+            var mes = prompt("Digite o nome de um mês");
+            var mesQtdeDias = 0;
+
+            switch(mes){
+                case "janeiro":
+                case "março":
+                case "maio":
+                case "julho":
+                case "agosto":
+                case "outubro":
+                case "dezembro":
+                    mesQtdeDias = 31;
+                    break;
+                case "abril":
+                case "junho":
+                case "setembro":
+                case "novembro":
+                    mesQtdeDias = 30;
+                    break;
+                case "fevereiro":
+                    mesQtdeDias = 28;
+                    break;
+                default:
+                    console.log("Mês inválido");
+                    break;
+            }       
+
+            console.log("O mês de " + mes + " tem "+ mesQtdeDias + " dias");
+
+        </script>
+    </body>
+</html>

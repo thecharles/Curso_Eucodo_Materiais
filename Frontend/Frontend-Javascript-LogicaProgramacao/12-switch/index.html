@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+    </head>
+    <body>
+        <h1>
+            Aprendendo estrutura de condição SWITCH
+        </h1>
+        <script type="text/javascript">
+
+        var nome = prompt("Qual o seu nome?");
+        var salario = 0.0;
+
+        switch(nome){
+            case "João":
+                salario = 1000.00;
+                break;
+
+            case "Maria":
+                salario = 2000.00;
+                break;
+
+            case "José":
+                salario = 3000.00;
+                break;
+
+            case "Rafaela":
+            case "Barbara":
+            case "Josefina":
+                salario = 4000.00;
+                break;
+
+            default:
+                salario = 500.0;
+                break;
+        }
+
+        console.log("O salário de " + nome + " é de R$ " + salario.toFixed(2));
+
+    </script>
+    </body>
+</html>
