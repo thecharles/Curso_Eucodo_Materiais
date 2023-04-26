@@ -10,29 +10,37 @@
 
         <script type="text/javascript">
 
-            function calcularSaldo()
-            {
-                var numeroConta = parseInt(document.getElementById("numeroConta").value);
-                var saldo = parseInt(document.getElementById("saldo").value);
-                var debito = parseInt(document.getElementById("debito").value);
-                var credito = parseInt(document.getElementById("credito").value);
+            // Variáveis
+            var nome = "Charles"; // Pode mudar o valor da variável
+            let nome2 = "Barbara"; // Pode mudar o valor da variável
+            const nome3 = "Rhannerson"; // Não pode mudar o valor da variável
 
-                var saldoAtual = saldo - debito + credito;
+            // Tipos de dados
+            var carro = "BMW"; // string
+            var carro2 = 'Mercedez'; // string
+            var idade = 38; // number
+            var salario = 1000.25; // number
+            var possuiHabilitacao = true; // booleana
+            
+            // Operadores e expressões
+            // + soma
+            // - subtração
+            // * multiplicação
+            // / divisão
+            // % módulo (pegar o resto de uma divisão)
+            var salarioMinimo = 1000;
+            var totalVendasNoMes = 25000;
+            var comissao = 0.15;
+            var salarioTotalDoMes = salarioMinimo + (totalVendasNoMes * comissao);
+            // (((1 + 1) * 2) + 1) / 2;
 
-                // if (saldoAtual >= 0)
-                // {
-                //     document.getElementById("resultado").innerHTML = "Saldo Positivo";
-                // }
-                // else
-                // {
-                //     document.getElementById("resultado").innerHTML = "Saldo Negativo";
-                // }
+            // Comentários - Alberto Rhannerson
+            // 1) // ou /**/
 
-                document.getElementById("resultado").innerHTML = "Saldo da conta " + numeroConta + ": ("+ saldoAtual +")" + 
-                (saldoAtual >= 0 ? "Saldo Positivo" : "Saldo Negativo");
+            // Inserindo javascript no HTML
+            
+            // Recursos nativos do navegador
 
-                return false;
-            }
         </script>
         <h1>
             Exercicio 15
@@ -42,31 +50,7 @@
             débito e crédito. Após, calcular e escrever o saldo atual (saldo
             atual = saldo - débito + crédito). Também testar se saldo atual for
             maior ou igual a zero escrever a mensagem 'Saldo Positivo', senão
-            escrever a mensagem 'Saldo Negativo'.
+            escrever a mensagem <b style="color:red;">'Saldo Negativo'</b>.
         </p>
-
-        <form>
-            <div>
-                Número da conta
-                <input type="text" id="numeroConta" />
-            </div>
-            <div>
-                Saldo
-                <input type="text" id="saldo" />
-            </div>
-            <div>
-                Débito
-                <input type="text" id="debito" />
-            </div>
-            <div>
-                Crédito
-                <input type="text" id="credito" />
-            </div>
-            <div>
-                <button onclick="return calcularSaldo();">Calcular saldo</button>
-            </div>
-            <div id="resultado">
-            </div>
-        </form>
     </body>
 </html>

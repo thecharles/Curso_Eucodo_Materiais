@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+    </head>
+    <body>
+        <script type="text/javascript">
+
+            function calcularMedia()
+            {
+                var quantidadeAtualEmEstoque = parseInt(document.getElementById("quantidadeAtualEmEstoque").value);
+                var quantidadeMaximaEmEstoque = parseInt(document.getElementById("quantidadeMaximaEmEstoque").value);
+                var quantidadeMinimaEmEstoque = parseInt(document.getElementById("quantidadeMinimaEmEstoque").value);
+
+                let media = (quantidadeMaximaEmEstoque + quantidadeMinimaEmEstoque) / 2;
+
+                return media;
+            }
+
+            function avaliarFormulario(e)
+            {                
+                var quantidadeAtualEmEstoque = parseInt(document.getElementById("quantidadeAtualEmEstoque").value);
+
+                let media = calcularMedia();
+
+                if (quantidadeAtualEmEstoque >= media)
+                {
+                    document.getElementById("resultado").innerHTML = "Media = " +  media +  ": Não efetuar compra";
+                }
+                else
+                {
+                    document.getElementById("resultado").innerHTML = "Media = " +  media +  ": Efetuar compra";
+                }
+
+                return false;
+            }
+
+        </script>
+        <h1>Exercício 16</h1>
+        <p>
+            Faça um algoritmo para ler: quantidade atual em estoque, quantidade
+            máxima em estoque e quantidade mínima em estoque de um produto.
+            Calcular e escrever a quantidade média
+
+            ((quantidade média = máxima + quantidade mínima)/2).
+            Se a quantidade atual for maior ou igual a quantidade média escrever
+            a
+            mensagem. 'Não efetuar compra', senão escrever a mensagem 'Efetuar
+            compra'.
+        </p>
+        <form>
+            <label for="quantidadeAtualEmEstoque">Quantidade atual em estoque</label>
+            <input type="number" name="quantidadeAtualEmEstoque"
+                id="quantidadeAtualEmEstoque">
+            <br>
+            <label for="quantidadeMaximaEmEstoque">Quantidade máxima em estoque</label>
+            <input type="number" name="quantidadeMaximaEmEstoque"
+                id="quantidadeMaximaEmEstoque">
+            <br>
+            <label for="quantidadeMinimaEmEstoque">Quantidade mínima em estoque</label>
+            <input type="number" name="quantidadeMinimaEmEstoque"
+                id="quantidadeMinimaEmEstoque">
+            <br>
+            <button onclick="return avaliarFormulario();">Calcular salário</button>
+        </form>
+        <div id="resultado">
+
+        </div>
+    </body>
+</html>
