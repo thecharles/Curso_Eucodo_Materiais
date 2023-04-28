@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+    </head>
+    <body>
+
+        <script type="text/javascript">
+
+            function nomeDaFuncao(nome, adjetivo){
+                console.log(nome + " é " + adjetivo + " tem um salário de " + calcularSalario(nome) + " e tem " + obterCliente().idade + " anos.");
+            }
+
+            function calcularSalario(nome)
+            {
+                let salario = 0;
+
+                if(nome == "Charles")
+                    salario = 1000;
+                else if(nome == "Pedro")
+                    salario = 2000;
+                else if(nome == "João")
+                    salario = 3000;
+                else
+                    salario = 4000;
+
+                return salario;
+            }
+
+            function obterCliente()
+            {
+                return { nome: "charles", idade: 38 };
+            }
+
+            for(let contador = 0; contador < 3; contador++){
+                nomeDaFuncao("Charles" + contador, "legal");
+                nomeDaFuncao("Charles" + contador, "cabeçudo");
+            }
+
+            nomeDaFuncao("Pedro", "lindo");
+            nomeDaFuncao("João", "lindo");
+
+    </script>
+    </body>
+</html>

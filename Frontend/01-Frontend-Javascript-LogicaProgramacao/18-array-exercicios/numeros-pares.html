@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+    </head>
+    <body>
+        <h1>Lógica de programação com javascript - exibindo soma de números
+            pares e ímpares</h1>
+        <p>
+            Escreva um programa que solicita
+            ao usuário que digite 5 números e
+            exibe a soma dos números pares
+            digitados e também a soma dos
+            números ímpares.
+        </p>
+        <script type="text/javascript">
+
+            let numeros = [];
+
+            while(true)
+            {
+                var numero = prompt("Digite um número ou SAIR para finalizar: ");
+                if(numero == "SAIR")
+                    break;
+
+                numeros.push(parseInt(numero));
+            }
+
+            let somaPares = 0;
+            let somaImpares = 0;
+
+            for (let i = 0; i < numeros.length; i++) {
+                let isNumeroPar = numeros[i] % 2 == 0;
+                if (isNumeroPar) {
+                    somaPares += numeros[i];
+                } else {
+                    somaImpares += numeros[i];
+                }
+            }
+
+            alert(
+                "RESULTADO\n\n" +
+                "Soma dos números pares: " + somaPares + "\n" +
+                "Soma dos números ímpares: " + somaImpares
+            );
+
+        </script>
+    </body>
+</html>

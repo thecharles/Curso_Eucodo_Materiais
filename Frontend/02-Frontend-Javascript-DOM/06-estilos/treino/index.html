@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body class="temaClaro">
+
+        Qual tema você deseja escolhar?
+        <select name="tema" id="tema">
+            <option value="temaClaro">Claro</option>
+            <option value="temaEscuro">Escuro</option>
+            <option value="temaHacker">Hacker</option>
+        </select>
+
+        <input type="button" value="Trocar tema" onclick="trocarTemaDireto()">
+        <script type="text/javascript">
+                function trocarTema()
+                {
+                    var tema = document.getElementById("tema").value;
+                    document.body.className = tema;
+                }
+
+                function trocarTemaDireto()
+                {
+                    switch(document.getElementById("tema").value)
+                    {
+                        case "temaClaro":
+                            document.body.style.backgroundColor = "#fff";
+                            document.body.style.color = "#000";
+                            break;
+                        case "temaEscuro":
+                            document.body.style.backgroundColor = "#000";
+                            document.body.style.color = "#fff";
+                            break;
+                        case "temaHacker":
+                            document.body.style.backgroundColor = "#000";
+                            document.body.style.color = "#00ff00";
+                            break;
+                    }
+                }
+        </script>
+    </body>
+</html>

@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+    </head>
+    <body>
+        <h1>Lógica de programação com javascript - Cadastro de imóveis</h1>
+        <p>
+            Escreva um programa em javascript que funcione como um cadastro de
+            imóveis
+            e atenda aos seguintes requisitos:
+
+            - Deve ter um menu interativo que sempre é exibido até que o usuário
+            escolha
+            sair.
+            - O menu deve ter a opção de salvar um imóvel
+            - Para salvar um novo imóvel, o programa deve pedir as seguintes
+            informações:
+            Nome do proprietário, qtde de quartos, qtde de banheiros e se possui
+            garagem
+            (sim ou não).
+            - O menu também deve ter a opção de mostrar todos os imóveis salvos.
+        </p>
+        <script type="text/javascript">
+
+            let imoveis = [];
+
+            while(true)
+            {
+                if(imoveis.length > 0)
+                {
+                    var listaImoveis = "";
+                    for (let i = 0; i < imoveis.length; i++) {
+
+                        var possuiGaragemDescricao= "";
+                        if(imoveis[i].possuiGaragem == true)
+                        {
+                            possuiGaragemDescricao = "Sim";
+                        }
+                        else{
+                            possuiGaragemDescricao = "Não";
+                        }
+
+                        listaImoveis +=  i + " - " + imoveis[i].proprietarioNome + 
+                            ", qtde de quartos: "+ imoveis[i].qtdeQuartos +
+                            ", qtde de banheiros: "+ imoveis[i].qtdeBanheiros +
+                            ", possui garagem: "+ possuiGaragemDescricao + "\n";
+                    }
+                    alert(
+                        "IMÓVEIS CADASTRADOS\n" + 
+                        listaImoveis
+                    );
+                }                
+
+                var opcaoMenu = prompt("Digite NOVO, REMOVER ou SAIR para finalizar:");
+                if(opcaoMenu == "SAIR")
+                    break;
+
+                switch(opcaoMenu)
+                {
+                    case "NOVO":
+                        let novoImovel = {};
+                        novoImovel.proprietarioNome = prompt("Digite o nome do proprietário:");
+                        novoImovel.qtdeQuartos = parseInt(prompt("Digite a qtde de quartos:"));
+                        novoImovel.qtdeBanheiros = parseInt(prompt("Digite a qtde de banheiros:"));
+                        novoImovel.possuiGaragem = prompt("Possui garagem? (sim ou não):") == "sim";
+                        imoveis.push(novoImovel);
+                        break;
+
+                    case "REMOVER":
+                        var index = prompt("Digite o índice do imóvel:");
+                        imoveis.splice(index, 1);
+                        break;
+                }
+            }
+
+        </script>
+    </body>
+</html>

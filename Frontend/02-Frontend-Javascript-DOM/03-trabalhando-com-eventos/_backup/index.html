@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+        <script type="text/javascript" src="arquivo.js" defer></script>
+    </head>
+    <body>
+        <h1>Trabalhando com eventos</h1>
+
+        <form id="formulario">
+            <div>
+                <label for="nome">Nome</label>
+                <input type="text" name="nome" placeholder="digite seu nome" />
+            </div>
+            <div>
+                <label for="sobrenome">Sobrenome</label>
+                <input type="text" name="sobrenome" placeholder="digite seu
+                    sobrenome"
+                    />
+            </div>
+            <div>
+                <label for="cv">CV</label>
+                <textarea name="cv" placeholder="seu cv"></textarea>
+            </div>
+            <div>
+                Cidade:
+                <select name="cidade">
+                    <option value="1">São Paulo</option>
+                    <option value="2">Rio de Janeiro</option>
+                    <option value="3">Belo Horizonte</option>
+                </select>
+            </div>
+            <div>
+                Orientação sexual:
+                <input type="radio" name="orientacaoSexual" value="hetero" />
+                hetero
+                <input type="radio" name="orientacaoSexual" value="homo" /> homo
+            </div>
+            <div>
+                Itens que possui:
+                <div>
+                    <input type="checkbox" name="patrimonio" value="Carro" />
+                    Carro
+                    <input type="checkbox" name="patrimonio" value="Bike" />
+                    Bike
+                    <input type="checkbox" name="patrimonio" value="Xícara" />
+                    Xícara
+                    <input type="checkbox" name="patrimonio" value="Copo" />
+                    Copo
+                    <input type="checkbox" name="patrimonio" value="Namorada" />
+                    Namorada
+                </div>
+            </div>
+
+            <input type="submit" value="Enviar" />
+        </form>
+
+    </body>
+</html>

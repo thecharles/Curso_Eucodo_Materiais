@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+        <script src="tela-login.js" defer></script>
+        <link rel="stylesheet" href="tela-login-style.css">
+    </head>
+    <body>
+
+        <div id="formularioLogin">
+            <h1>
+                Login
+            </h1>
+            <form>
+                <div>
+                    email: <input type="text" id="loginEmail" />
+                </div>
+                <div>
+                    senha: <input type="password" id="loginSenha" />
+                </div>
+                <div>
+                    <input type="button" value="Enviar" id="loginEnviar" />
+                    <input type="button" value="Esqueci minha senha"
+                        id="loginEsqueciMinhaSenha" />
+                </div>
+            </form>
+        </div>
+
+        <div id="autenticadoComSucesso">
+            <h1>
+                Autenticado com sucesso
+            </h1>
+            <p>
+                Você foi autenticado com sucesso <span
+                    id="autenticadoComsucessoEmail"></span>
+            </p>
+        </div>
+
+        <div id="esqueciMinhaSenha">
+            <h1>
+                Esqueci minha senha
+            </h1>
+            <form>
+                <div>
+                    Email: <input type="text" id="esqueciMinhaSenhaEmail" />
+                </div>
+                <div>
+                    <input type="button" value="Enviar"
+                        id="esqueciMinhaSenhaEnviar" />
+                </div>
+            </form>
+        </div>
+
+    </body>
+</html>

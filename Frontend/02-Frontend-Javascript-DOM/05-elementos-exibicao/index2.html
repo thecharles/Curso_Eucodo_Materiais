@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+    </head>
+    <body>
+
+        <div id="formulario">
+
+            <h1>
+                Formulário de login
+            </h1>
+
+            <form>
+                Email: <input type="email" name="email" id="email"
+                    placeholder="Digite seu email">
+                <br>
+                Senha: <input type="password" name="senha" id="senha"
+                    placeholder="Digite sua senha">
+                <br>
+                <input type="button" value="Enviar" onclick="revisarDados()"
+                    id="enviar">
+            </form>
+
+        </div>
+
+        <div id="resultado" style="display:none;">
+            <h1>Confirmação de cadastro</h1>
+            <p>Email: <span id="confirmarEmail"></span></p>
+            <p>Senha: <span id="confirmarSenha"></span></p>
+            <hr>
+            <input type="button" value="Voltar" onclick="voltar()" id="voltar">
+            <input type="button" value="Confirmar" onclick="confirmarCadastro()"
+                id="voltar">
+        </div>
+
+        <div id="cadastroSucesso" style="display:none;">
+            <h1>Cadastrado com sucesso</h1>
+            <p>
+                Você foi cadastrado com sucesso <span id="cadastroSucessoEmail"></span>
+            </p>
+        </div>
+
+        <script type="text/javascript">
+
+                function revisarDados()
+                {
+                    var email = document.getElementById("email").value;
+                    var senha = document.getElementById("senha").value;
+
+                    document.getElementById("resultado").style.display = "block";
+                    document.getElementById("formulario").style.display = "none";
+
+                    document.getElementById("confirmarEmail").innerHTML = email;
+                    document.getElementById("confirmarSenha").innerHTML = senha;
+                }
+
+                function voltar()
+                {
+                    document.getElementById("resultado").style.display = "none";
+                    document.getElementById("formulario").style.display = "block";
+                }
+
+                function confirmarCadastro()
+                {
+                    var email = document.getElementById("email").value;
+
+                    document.getElementById("resultado").style.display = "none";
+                    document.getElementById("cadastroSucesso").style.display = "block";
+
+                    document.getElementById("cadastroSucessoEmail").innerHTML = email;
+                }
+
+        </script>
+    </body>
+</html>

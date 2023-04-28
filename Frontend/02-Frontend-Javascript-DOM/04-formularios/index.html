@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+    </head>
+    <body>
+        <h1>
+            Formulário de cadastro de funcionário
+        </h1>
+
+        <form>
+
+            <div>
+                Email:
+                <div>
+                    <input type="email" name="email" id="email"
+                        placeholder="Digite seu email" />
+                </div>
+            </div>
+            <hr>
+            <hr>
+            <div>
+                Onde você viu nosso site?
+                <div>
+                    <select name="ondeViu">
+                        <option value="google">Google</option>
+                        <option value="facebook">Facebook</option>
+                        <option value="instagram">Instagram</option>
+                        <option value="amigo">Amigo</option>
+                    </select>
+                </div>
+            </div>
+            <hr>
+            <div>
+                O que você considera importante na vida?
+                <div>
+                    <input type="checkbox" name="importante" value="familia" />
+                    Família
+                    <input type="checkbox" name="importante" value="saúde" />
+                    Saúde
+                    <input type="checkbox" name="importante" value="Bens
+                        materiais" /> Bens materiais
+                    <input type="checkbox" name="importante" value="Sol" /> Sol
+                    <input type="checkbox" name="importante" value="Praia" />
+                    Praia
+                </div>
+            </div>
+            <hr>
+            <div>
+                Quais veículos você possui?
+                <div>
+                    <input type="checkbox" name="veiculo" value="Carro" /> Carro
+                    <input type="checkbox" name="veiculo" value="Bike" /> Bike
+                    <input type="checkbox" name="veiculo" value="Barco" /> Barco
+                    <input type="checkbox" name="veiculo" value="Moto" /> Moto
+                    <input type="checkbox" name="veiculo" value="Caminhão" />
+                    Caminhão
+                </div>
+            </div>
+
+            <hr>
+            <div>
+                Orientação sexual:
+                <div>
+                    <input type="radio" name="orientacaoSexual" value="hetero"
+                        /> Hetero
+                    <input type="radio" name="orientacaoSexual"
+                        value="homosexual" /> Homosexual
+                </div>
+            </div>
+            <hr>
+            <div>
+                Fale um pouco você sobre você:
+                <div>
+                    <textarea name="sobreVoce" id="sobreVoce"></textarea>
+                </div>
+            </div>
+
+            <input type="button" value="Enviar" onclick="pegarDados()" />
+        </form>
+
+        <script type="text/javascript">
+
+            function obterCheckboxMarcados(checkboxNome)
+            {
+                var checkboxMarcados = document.querySelectorAll("input[name='" + checkboxNome + "']:checked");
+                var checkboxMarcadosValores = [];
+
+                for (var i = 0; i < checkboxMarcados.length; i++) {
+                    checkboxMarcadosValores.push(checkboxMarcados[i].value);
+                }
+
+                return checkboxMarcadosValores;
+            }
+
+            function pegarDados()
+            {
+                var email = document.querySelector("input[name='email']").value;
+                var ondeViu = document.querySelector("select[name='ondeViu']").value;
+                var veiculos = obterCheckboxMarcados("veiculo");
+                var orientacaoSexual = document.querySelector("input[name='orientacaoSexual']:checked")?.value;
+                var sobreVoce = document.querySelector("textarea[name='sobreVoce']").value;
+
+                console.log({
+                    email,
+                    ondeViu,
+                    importante : obterCheckboxMarcados("importante"),
+                    veiculos,
+                    orientacaoSexual: orientacaoSexual ?? "Não informado",
+                    sobreVoce
+                });
+            }
+
+    </script>
+    </body>
+</html>

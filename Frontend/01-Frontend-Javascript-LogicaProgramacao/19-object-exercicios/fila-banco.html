@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+    </head>
+    <body>
+        <h1>Lógica de programação em javascript - Exercício Fila de banco</h1>
+        <p>
+            Uma fila de banco envolve, o primeiro a chegar, é o primeiro a ser
+            atendido.
+            Isso é chamado de FIFO (First in First out).
+
+            Crie um programa que implemente uma fila de banco, onde o primeiro
+            da fila é o primeiro a ser atendido. O programa deve seguir as
+            seguintes regras:
+            - Apresente um menu na tela para o usuário escolher o que deseja
+            fazer. As opções são: NOVASENHA (Deverá pedir o nome do cliente e
+            acrescentar na fila), DAVEZ (deverá obter o cliente da vez), REMOVER
+            (deverá pedir o índice do cliente para ser removido da fila)
+            E SAIR (deverá encerrar o programa).
+            - Para obter uma nova senha, pedir via prompt o nome do cliente e
+            email do cliente;
+            - Para ver o cliente da vez, usar o shift e exibir na tela "O
+            cliente XXXX foi atendido";
+            - Para inserir o cliente novo (nova senha), usar o push;
+            - Para remover o cliente, usar o splice;
+        </p>
+        <script type="text/javascript">
+
+            let fila = [];
+
+            while(true)
+            {
+                if(fila.length > 0)
+                {
+                    var filaDescricao = "";
+                    for(let i = 0; i < fila.length; i++)
+                    {
+                        filaDescricao += i + " - " + fila[i].nome + "("+ fila[i].email +")" + "\n";
+                    }
+                    alert(
+                        "FILA ATUAL DO BANK OF CHARLES\n\n" +
+                        filaDescricao
+                    );
+                }
+
+                var opcaoMenu = prompt("Digite a opção desejada: NOVASENHA, DAVEZ, REMOVER ou SAIR");
+                if(opcaoMenu == "SAIR")
+                    break;
+
+                switch(opcaoMenu)
+                {
+                    case "NOVASENHA":
+                        let novaSenha = {};
+                        novaSenha.nome = prompt("Digite o nome do cliente");
+                        novaSenha.email = prompt("Digite o email do cliente");
+                        fila.push(novaSenha);
+                        break;
+
+                    case "REMOVER":
+                        let posicao = prompt("Digite a posição do cliente a ser removido");
+                        fila.splice(posicao, 1);
+                        break;
+
+                    case "DAVEZ":
+                        if(fila.length > 0)
+                        {
+                            let cliente = fila.shift();
+                            alert("Cliente " + cliente.nome + " ("+ cliente.email +") atendido com sucesso!");
+                        }
+                        else
+                        {
+                            alert("Não há clientes na fila");
+                        }
+                        break;
+                }
+            }
+
+        </script>
+    </body>
+</html>

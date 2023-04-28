@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+    </head>
+    <body>
+
+        <script type="text/javascript" src="arquivo.js"></script>
+
+        <script type="text/javascript">
+
+            function palmeiras()
+            {
+                console.log("Palmeiras tem mundial sim");
+            }
+
+        </script>
+        <h1>Eventos no HTML</h1>
+
+        <form>
+
+            <div>
+                <label for="onMouseEnter">Entrada do Mouse:</label>
+                <input type="text" id="onMouseEnter"
+                    onmouseenter="palmeiras()">
+            </div>
+            <br>
+            <div>
+                <label for="onChange">Mudança de Valor:</label>
+                <input type="text" id="onChange"
+                    onchange="flamengoTimeBom()">
+            </div>
+            <br>
+            <div>
+                <label for="onFocus">Entrada de Foco:</label>
+                <input type="text" id="onFocus"
+                    onfocus="console.log('onfocus')">
+            </div>
+            <br>
+            <div>
+                <label for="onBlur">Saída de Foco:</label>
+                <input type="text" id="onBlur" onblur="console.log('onblur')">
+            </div>
+            <br>
+            <button onclick="console.log('vc clicou em mim')">
+                Clique-me!
+            </button>
+
+        </form>
+
+    </body>
+</html>

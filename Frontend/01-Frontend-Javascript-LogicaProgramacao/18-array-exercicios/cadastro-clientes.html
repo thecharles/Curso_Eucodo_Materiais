@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+    </head>
+    <body>
+        <h1>Lógica de programação com javascript - Cadastro de clientes</h1>
+        <p>
+            Escreva um programa em javascript
+            que solicita o nome do cliente e
+            acrescente (push) ele numa lista
+            lista. Após acrescentar, exibir essa
+            lista na tela com os clientes e suas
+            respectivas posições no array
+            (índice). Dê a opção para o usuário
+            remover o cliente se ele quiser
+            pedindo o índice e removendo do
+            array. Peça a opção via prompt().
+        </p>
+        <script type="text/javascript">
+
+            let clientes = [];
+            let clientesEmails = [];
+
+            while(true)
+            {
+                if(clientes.length > 0)
+                {
+                    var listaClientes = "";
+                    for (let i = 0; i < clientes.length; i++) {
+                        listaClientes +=  i + " - " + clientes[i] + " ("+ clientesEmails[i] +")\n";
+                    }
+                    alert(
+                        "CLIENTES CADASTRADOS\n" + 
+                        listaClientes
+                    );
+                }                
+
+                var opcaoMenu = prompt("Digite NOVO, REMOVER ou SAIR para finalizar:");
+                if(opcaoMenu == "SAIR")
+                    break;
+
+                switch(opcaoMenu)
+                {
+                    case "NOVO":
+                        var nomeCliente = prompt("Digite o nome do cliente:");
+                        var emailCliente = prompt("Digite o email  do cliente:");
+                        clientes.push(nomeCliente);
+                        clientesEmails.push(emailCliente);
+                        break;
+
+                    case "REMOVER":
+                        var indiceCliente = prompt("Digite o índice do cliente:");
+                        clientes.splice(indiceCliente, 1);
+                        clientesEmails.splice(indiceCliente, 1);
+                        break;
+                }
+            }
+
+        </script>
+    </body>
+</html>

@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+    </head>
+    <body>
+        <h1>Lógica de programação com javascript</h1>
+        <h2>
+            Exercício - Implementando uma fila de banco
+        </h2>
+        <p>
+            Crie um programa que implemente uma fila de banco, onde o primeiro
+            da fila é o primeiro a ser atendido. O programa deve seguir as
+            seguintes regras:
+            - Apresente um menu na tela para o usuário escolher o que deseja
+            fazer. As opções são: NOVASENHA (Deverá pedir o nome do cliente e
+            acrescentar na fila), DAVEZ (deverá obter o cliente da vez), REMOVER
+            (deverá pedir o índice do cliente para ser removido da fila)
+            E SAIR (deverá encerrar o programa).
+            - Para obter uma nova senha, pedir via prompt o nome do cliente;
+            - Para ver o cliente da vez, usar o shift e exibir na tela "O
+            cliente XXXX foi atendido";
+            - Para inserir o cliente novo (nova senha), usar o push;
+            - Para remover o cliente, usar o splice;
+        </p>
+        <script type="text/javascript">
+
+            let fila = [];
+
+            while(true)
+            {
+                var opcao = prompt("Digite a opção desejada: NOVASENHA, DAVEZ, REMOVER ou SAIR");
+                switch(opcao)
+                {
+                    case "NOVASENHA":
+                        let nome = prompt("Digite o nome do cliente");
+                        fila.push(nome);
+                        break;
+
+                    case "REMOVER":
+                        let posicao = prompt("Digite a posição do cliente a ser removido");
+                        fila.splice(posicao, 1);
+                        break;
+
+                    case "DAVEZ":
+                        if(fila.length > 0)
+                        {
+                            let cliente = fila.shift();
+                            alert("Cliente " + cliente + " atendido!");
+                        }
+                        else
+                        {
+                            alert("Não há clientes na fila");
+                        }
+                        break;
+                }
+
+                if(opcao == "SAIR")
+                {
+                    console.log(fila);
+                    break;
+                }
+
+                var clientesLista = "";
+                for(let i = 0; i < fila.length; i++)
+                {
+                    clientesLista += "["+ i +"] " + fila[i] + "\n";
+                }
+                alert(clientesLista);
+            }
+
+        </script>
+    </body>
+</html>

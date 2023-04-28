@@ -1,0 +1,14 @@
+.temaClaro {
+  background-color: #fff;
+  color: #000;
+}
+
+.temaEscuro {
+  background-color: #000;
+  color: #fff;
+}
+
+.temaHacker {
+  background-color: #000;
+  color: #00ff00;
+}

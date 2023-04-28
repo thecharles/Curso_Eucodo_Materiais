@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+    </head>
+    <body>
+        <h1>DOM - Praticando com formulário</h1>
+
+        <form>
+            Email: <input type="email" id="email" /> <br>
+            Senha: <input type="password" id="senha" /> <br>
+            <input type="button" value="Autenticar" onclick="autenticar()" />
+            <input type="button" value="Limpar" onclick="preencherCampos('','')"
+                />
+            <input type="button" value="Preencher com login válido"
+                onclick="preencherCampos('charles@gmail.com', 'internet')" />
+        </form>
+
+        <script type="text/javascript">
+
+            function preencherCampos(email, senha)
+            {
+                document.getElementById("email").value = email;
+                document.getElementById("senha").value = senha;
+            }
+
+            function autenticar()
+            {
+                var email = document.getElementById("email").value;
+                var senha = document.getElementById("senha").value;
+
+                if(email === "" || senha === "")
+                {
+                    alert("Preencha todos os campos.");
+                    return;
+                }
+                
+                if(!(email === "charles@gmail.com" && senha == "internet"))
+                {
+                    alert("Email ou senha inválidos!");
+                    return;
+                    
+                }
+                
+                alert("Autenticado com sucesso!");    
+            }
+    </script>
+    </body>
+</html>

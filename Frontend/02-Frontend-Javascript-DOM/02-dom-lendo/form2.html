@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+    </head>
+    <body>
+
+        <h1>DOM - Praticando formulários</h1>
+
+        <h3>Formulário de login</h3>
+        <form>
+            Email: <input type="email" id="email" value="charlesx@gmail.com" /><br>
+            Senha: <input type="password" id="senha" /><br>
+            <input type="button" value="Autenticar" onclick="autenticar()"
+                />
+        </form>
+
+        <script type="text/javascript">
+
+            function autenticar()
+            {
+                var email = document.getElementById("email").value;
+                var senha = document.getElementById("senha").value;
+
+                if(email === "" || senha === "")
+                    alert("Preencha todos os campos.");
+                else
+                    alert("Autenticado com sucesso!");
+
+            }
+
+        </script>
+    </body>
+</html>

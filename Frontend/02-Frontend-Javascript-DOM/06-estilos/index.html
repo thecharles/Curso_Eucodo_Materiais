@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body class="temaClaro">
+
+        <div>
+
+            <div>
+                Escolha o tema que você deseja:
+                <select name="tema" id="tema" onchange="trocarTema()">
+                    <option value="temaClaro">Tema Claro</option>
+                    <option value="temaEscuro">Tema Escuro</option>
+                    <option value="temaHacker">Tema Hacker</option>
+                </select>
+            </div>
+
+            <div>
+                <input type="button" value="Trocar Tema"
+                    onclick="trocarTema()">
+            </div>
+
+            <div>
+
+                <input type="button" value="Tema Claro"
+                    onclick="habilitarTemaClaro()">
+                <input type="button" value="Tema Escuro"
+                    onclick="habilitarTemaEscuro()">
+                <input type="button" value="Tema Hacker"
+                    onclick="habilitarTemaHacker()">
+            </div>
+
+        </div>
+
+        <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Assumenda,
+            esse possimus! Corrupti vero consectetur, amet porro quidem
+            voluptate eveniet voluptates ad unde, similique modi blanditiis.
+        </p>
+
+        <script type="text/javascript">
+
+            function trocarTema()
+            {
+                var tema = document.getElementById("tema").value;
+                document.body.className = tema;
+            }
+
+            function habilitarTemaClaro()
+            {
+                document.body.className = "temaClaro";
+            }
+
+            function habilitarTemaEscuro()
+            {
+                document.body.className = "temaEscuro";
+            }
+
+            function habilitarTemaHacker()
+            {
+                document.body.className = "temaHacker";
+            }
+
+        </script>
+    </body>
+</html>
