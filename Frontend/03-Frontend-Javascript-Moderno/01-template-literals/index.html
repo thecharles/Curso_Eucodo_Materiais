@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+    </head>
+    <body>
+
+        <script type="text/javascript">
+
+        let cliente = {};
+
+        cliente.nome = prompt("Qual seu nome?");
+        cliente.email = prompt("Qual seu email?");
+        cliente.idade = prompt("Qual sua idade?");
+
+        // alert(
+        //     "DADOS DO CLIENTE\n" +
+        //     "Nome: " + cliente.nome + "\n" +
+        //     "Email: " + cliente.email + "\n" +
+        //     "Idade: " + cliente.idade + "\n"
+        // );
+
+        // alert com template literal
+        alert(`
+            DADOS DO CLIENTE
+            Nome: ${cliente.nome}
+            Email: ${cliente.email}
+            Idade: ${cliente.idade}
+        `);
+
+    </script>
+    </body>
+</html>

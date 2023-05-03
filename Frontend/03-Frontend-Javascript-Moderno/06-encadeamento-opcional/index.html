@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+    </head>
+    <body>
+        <h1>
+            Encadeamento opcional
+        </h1>
+        <script type="text/javascript">
+
+        const cliente = {
+            nome: "Charles",
+            telefone: {
+                ddd: "11",
+                numero: "999999999",
+                tipo: "celular"
+            },
+            amigos: [
+                {
+                    nome: "Barbara",
+                    telefone: {
+                        ddd: "11",
+                        numero: "999999999",
+                        tipo: "celular"
+                    }
+                },
+                {
+                    nome: "João",
+                    telefone: {
+                        ddd: "11",
+                        numero: "999999999",
+                        tipo: "celular"
+                    }
+                }
+            ]
+        };
+
+        console.log("Dados de " + cliente.nome);
+        for(i = 0; i < cliente.amigos.length; i++)
+        {
+            console.log("Nome: " + cliente.amigos[i].nome);
+            
+            // if(cliente.amigos[i].telefone !== undefined)
+            // {
+            //     console.log("Telefone: " + cliente.amigos[i].telefone.ddd + " " + cliente.amigos[i].telefone.numero);
+            //     console.log("Tipo: " + cliente.amigos[i].telefone.tipo);
+            // }
+
+            console.log("Telefone: " + cliente.amigos[i].telefone?.ddd + " " + cliente.amigos[i].telefone?.numero);
+            console.log("Tipo: " + cliente.amigos[i].telefone?.tipo);
+
+            console.log("--");
+        }
+
+    </script>
+    </body>
+</html>

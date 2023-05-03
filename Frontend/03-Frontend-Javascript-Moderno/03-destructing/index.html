@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+    </head>
+    <body>
+        <h1>Javascript moderno - destructing</h1>
+        <script type="text/javascript">
+
+        const cliente = {
+            nome: "João",
+            email: "charles@gmail.com",
+            carros: ["Gol 2", "Palio 2 ", "Uno 2", "Fusca 2"]
+        };
+        const { nome, email, carros } = cliente;
+        console.log(nome);
+        console.log(email);
+        console.log(carros);
+
+        const [carro1, carro2, carro3, carroFusca] = cliente.carros;
+
+        console.log(carro1);
+        console.log(carro2);
+        console.log(carro3);
+        console.log(carroFusca);
+
+        
+        
+
+    </script>
+    </body>
+</html>

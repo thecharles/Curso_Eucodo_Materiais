@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+    </head>
+    <body>
+        <h1>
+            rest params
+        </h1>
+        <script type="text/javascript">
+
+            function listarCarros(nome, email, ...carros)
+            {
+                console.log(`CARROS DE ${nome} (${email})`);
+                for (let carro of carros)
+                {
+                    console.log(carro);
+                }
+            }
+
+            listarCarros("Charles", "charles@gmail.com", "BMW", "UNO", "BIKE", "BMW", "UNO", "BIKE", "BMW", "UNO", "BIKE", "BMW", "UNO", "BIKE", "BMW", "UNO", "BIKE");
+            listarCarros("Barbara", "barbara@gmail.com", "Mercedes", "Volkswagen", "Ford");
+
+        function somar(...numeros)
+        {
+            let total = 0;
+
+            for (let numero of numeros)
+            {
+                total += numero;
+            }
+
+            return total;
+        }
+
+        function somar2(...numeros)
+        {
+            let total = 0;
+
+            for (let numero of numeros)
+            {
+                total += numero;
+            }
+
+            return total;
+        }
+
+        console.log(somar(1, 2, 3, 4, 5, 6, 7, 8, 9, 10));
+        console.log(somar2(1, 2, 3, 4, 5, 6, 7, 8, 9, 10));
+
+    </script>
+    </body>
+</html>

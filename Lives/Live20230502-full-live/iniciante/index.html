@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+    </head>
+    <body>
+
+        <h1>
+            Javascript
+        </h1>
+
+        <p>
+            Ler o nome de 2 times e o número de gols marcados na partida (para
+            cada time). Escrever o nome do vencedor. Caso não haja vencedor
+            deverá ser impressa a palavra EMPATE.
+        </p>
+
+        <script type="text/javascript">
+
+            // Variáveis
+            var nomeTime1 = prompt("Qual o primeiro time?");
+            var nomeTime2 = prompt("Qual o segundo time?");
+            var golsTime1 = parseInt(prompt("Quantos gols o " + nomeTime1 + " fez?"));
+            var golsTime2 = parseInt(prompt("Quantos gols o " + nomeTime2 + " fez?"));
+            
+            var vencedor = "";
+
+            if(golsTime1 > golsTime2){
+                vencedor = nomeTime1;
+            }else{
+                if(golsTime2 > golsTime1){
+                    vencedor = nomeTime2;
+                }else{
+                    vencedor = "Empate";
+                }
+            }
+
+            console.log("O vencedor é: " + vencedor);
+
+        </script>
+    </body>
+</html>

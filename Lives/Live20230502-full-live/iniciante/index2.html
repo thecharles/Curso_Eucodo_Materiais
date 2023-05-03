@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+    </head>
+    <body>
+        <h1>
+            Exercicio
+        </h1>
+        <p>
+            Ler 3 valores (considere que não serão informados valores iguais) e
+            escrever o maior deles
+        </p>
+
+        <script type="text/javascript">
+
+            var valor1 = parseInt(prompt("Digite o primeiro valor"));
+            var valor2 = parseInt(prompt("Digite o primeiro valor"));
+            var valor3 = parseInt(prompt("Digite o primeiro valor"));
+
+            if(valor1 > valor2)
+            {
+                if(valor1 > valor3)
+                {
+                    console.log(valor1);
+                }
+                else{
+                    console.log(valor3);
+                }   
+            }
+            else{
+                if(valor2 > valor3)
+                {
+                    console.log(valor2);
+                }
+                else{
+                    console.log(valor3);
+                }
+            }
+
+        </script>
+    </body>
+</html>
